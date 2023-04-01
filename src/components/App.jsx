@@ -3,6 +3,7 @@ import { Container, IfEmpty, DefaultButton } from "./App.styled";
 import { ContactsForm } from "./ContactsForm/ContactsForm";
 import { ContactsFormList } from './ContactsFormList/ContactsFormList';
 import { Filter } from './Filter/Filter';
+// import { createStore } from "redux";
 import Notiflix from 'notiflix';
 
 export const App = () => {
