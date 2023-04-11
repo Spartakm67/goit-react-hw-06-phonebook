@@ -24,13 +24,14 @@ import { getFilter } from 'redux/selectors';
 export const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(getFilter);
+  const changeFilterValue = event => dispatch(setFilter(event.currentTarget.value));
 
   return (
     <FilterList>
       <h3>Find contacts by name</h3>
       <input type="text"
         value={filter}
-        onChange={event => dispatch(setFilter(event.currentTarget.value))} ></input>
+        onChange={changeFilterValue} ></input>
     </FilterList>
   );
 };
