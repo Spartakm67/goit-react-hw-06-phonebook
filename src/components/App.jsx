@@ -3,22 +3,22 @@ import { ContactsForm } from "./ContactsForm/ContactsForm";
 import { ContactsFormList } from './ContactsFormList/ContactsFormList';
 import { Filter } from './Filter/Filter';
 import { useSelector } from 'react-redux';
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getContacts } from 'redux/selectors';
-// import { addInitialContacts } from '../redux/contactsSlice';
+import { addInitialContacts } from '../redux/contactsSlice';
 import Notiflix from 'notiflix';
 
 export const App = () => {
 
 const contacts = useSelector(getContacts);
-// const dispatch = useDispatch();
+const dispatch = useDispatch();
     
   const addDefaultContacts = () => {
         
     setTimeout(() => {
-      // dispatch(addInitialContacts());
-    localStorage.clear();
-    window.location.reload()  
+      dispatch(addInitialContacts());
+    // localStorage.clear();
+    // window.location.reload()  
 
     }, 2000);
     
